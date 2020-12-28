@@ -62,7 +62,7 @@ class XMLTag
 					{
 					foreach($arrTags as $strTag)
 						{
-						$arrTag[$strTagOpen][$strTag]	=XMLTag::arr($strTagString, $strTag)[0]['str'];
+						$arrTag[$strTagOpen][$strTag]	=MyXML::arr($strTagString, $strTag)[0]['str'];
 						}
 					}
 				//$arrTag[$strTagOpen]['server_name']		=Tag::arr($arrTag[$strTagOpen]['str'], 'server_name');
