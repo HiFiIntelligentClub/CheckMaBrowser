@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 		          /*© A.A.CheckMaRev assminog@gmail.com*/
 		    ////// 				//
@@ -6,13 +7,30 @@
 		     //     Jl   				//
 		    //////				/////////
 		    //$_arrData=array('strDir'=>'dir', 'strFile'=>'file');
-//$strJSON	=MyJSON::str(array);
+//function сПреобразовать($_str)
+//	{
+//	str_replace('"','',$_str);
+//	return $str;
+//	}
+//echo  $strJSON	=MyJSON::str(array(
+//			'arrJSON'=>
+//			array(
+//				'a'=>'asdasd', 
+//				'asd'=>
+//				array(
+//					'a'=>
+//					array(
+//					'a'=>'aaa'
+//					)
+//				)
+//			)
+//		));
+
 class MyJSON
 	{
 	public $str	='';
 	public $arr	=array();
 	public function __construct(
-		$_strEvent, 
 		$_arrData=
 		array(
 			'arrJSON'=>array(),
@@ -20,9 +38,10 @@ class MyJSON
 			)
 		)
 		{
+		
 		if(!empty($_arrData['arrJSON'])&&is_array($_arrData['arrJSON']))
 			{
-			$this->str	=$this->strMyJSONRec(($_arrData['arrJSON']);
+			$this->str	=$this->strMyJSONRec(($_arrData['arrJSON']));
 			}
 		}
 	private function strMyJSONRec($_arrJSON)
