@@ -1,12 +1,36 @@
 <?php
+		          /*© A.A.CheckMaRev assminog@gmail.com*/
+		    ////// 				//
+		   //   /\ RCe			/////////
+		      //  <  **> 				//
+		     //     Jl   				//
+		    //////				/////////
+		    //$_arrData=array('strDir'=>'dir', 'strFile'=>'file');
+//$strJSON	=MyJSON::str(array);
 class MyJSON
 	{
-	public function __construct($_arrJson)
+	public $str	='';
+	public $arr	=array();
+	public function __construct(
+		$_strEvent, 
+		$_arrData=
+		array(
+			'arrJSON'=>array(),
+			'strJSON'=>''
+			)
+		)
 		{
-		if(is_array($_arrJson))
+		if(!empty($_arrData['arrJSON'])&&is_array($_arrData['arrJSON']))
+			{
+			$this->str	=$this->strMyJSONRec(($_arrData['arrJSON']);
+			}
+		}
+	private function strMyJSONRec($_arrJSON)
+		{
+		if(is_array($_arrJSON))
 			{
 			$str	='{';
-			foreach($_arrJson as $srtName=>$_Value)
+			foreach($_arrJSON as $srtName=>$_Value)
 				{
 				if(!is_int($srtName))
 					{
@@ -14,7 +38,7 @@ class MyJSON
 					}
 				if(is_array($_Value))
 					{
-					$str	.=strMyJsonRec($_arrJson[$srtName]);
+					$str	.=$this->strMyJSONRec($_arrJSON[$srtName]);
 					}
 				else
     					{
@@ -26,9 +50,10 @@ class MyJSON
 			}
 		return $str;
 		}
-	function strMyJson($_arrJson)
+	public static function str($_arrJSON)
 		{
-		return substr(strMyJsonRec($_arrJson),0,-2);
+		$objMyJSON	=new MyJSON($_arrJSON);
+		return substr($objMyJSON->str,0,-2);
 		}
 	public static function arr()
 		{
