@@ -9,3 +9,10 @@ And the last one is encapsulate in to virtual mashine (CPU based manual reading 
 
 # Current step - read HTML table, and display it without applying any properties.
 
+
+### © Андрей Чекмарёв assminog@gmail.com 2021
+### © Andrej Tjekmarjov tubmulur@yandex.ru 2021
+### © Tj Morjov from polar circle vk.com/TjMorjov  2021 (Used very rare)
+### © Hfic.Samin vk.com/Hfic.Samin 2021
+### © Andrey Chekmaryov facebook.com/Hfic.Samin 2021
+### © Andrey Chekmarev assminog@list.ru 2021
